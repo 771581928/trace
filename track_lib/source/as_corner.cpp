@@ -1,8 +1,15 @@
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <features2d/features2d.hpp>
+#include<opencv2/legacy/legacy.hpp>
+
+
 #include "../include/as_corner.h"
 #include "../../platform_lib/include/as_platform.h"
 #include "stdio.h"
 
-
+using namespace cv;
 CornerAlgInfo *p_gCornerAlg = NULL;
 
 void asCornerInit(int img_w, int img_h)
