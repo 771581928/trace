@@ -2,7 +2,7 @@
 #include "highgui.h"
 
 #include "stdio.h"
-#include "../include/as_track_alg.h"
+#include "../include/as_alg_private.h"
 extern TrackAlgInfo gAlgInfo;
 
 void drawDetectBoxes(IplImage *imgRGB)

@@ -1,4 +1,4 @@
-#include "../include/as_track_alg.h"
+#include "../include/as_alg_private.h"
 AsRect  asRect(int x, int y, int width, int height)
 {
 	AsRect r;

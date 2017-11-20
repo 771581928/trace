@@ -142,6 +142,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\as_alg.h" />
+    <ClCompile Include="source\as_alg.cpp" />
     <ClCompile Include="source\as_corner.cpp" />
     <ClCompile Include="source\as_show_alg.cpp" />
     <ClCompile Include="source\as_track.cpp" />
@@ -150,7 +152,7 @@
   <ItemGroup>
     <ClInclude Include="include\as_corner.h" />
     <ClInclude Include="include\as_track.h" />
-    <ClInclude Include="include\as_track_alg.h" />
+    <ClInclude Include="include\as_alg_private.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

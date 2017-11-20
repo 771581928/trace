@@ -1,5 +1,5 @@
-#ifndef __AS_TRACK_ALG_H__
-#define __AS_TRACK_ALG_H__
+#ifndef __AS_ALG_PRIVATE_H__
+#define __AS_ALG_PRIVATE_H__
 
 #ifdef __cplusplus
 extern "C" {

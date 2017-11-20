@@ -1,6 +1,6 @@
 #include "cv.h"
 #include "highgui.h"
-#include "../track_lib/include/as_track.h"
+#include "../track_lib/include/as_alg.h"
 
 #define PROCESS_IMG_W 640
 #define PROCESS_IMG_H 480
@@ -30,7 +30,7 @@ int main()
 	params.img_w = PROCESS_IMG_W;
 	params.img_h = PROCESS_IMG_H;
 	
-	asTrackInit(&params);
+	asAlgInit(&params);
 
 	Mat frame;
 	int index = 0;
@@ -58,11 +58,11 @@ int main()
 		algFrame.img_h = gray.rows;
 		//showImg(algFrame.y, algFrame.img_w, algFrame.img_h);
 
-		asTrackProcess(&algFrame);
+		asAlgProcess(&algFrame);
 		
 		index++;
 	}
-	asTrackUinit();
+	asAlgUinit();
 
 	system("pause");
 }

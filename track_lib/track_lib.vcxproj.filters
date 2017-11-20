@@ -27,15 +27,21 @@
     <ClCompile Include="source\as_corner.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="source\as_alg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="include\as_alg.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\as_track.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="include\as_track_alg.h">
+    <ClInclude Include="include\as_corner.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="include\as_corner.h">
+    <ClInclude Include="include\as_alg_private.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
