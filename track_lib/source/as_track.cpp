@@ -3,12 +3,14 @@
 #include "../include/as_track.h"
 #include "../include/as_track_alg.h"
 #include "../../detect_lib/include/as_detect.h"
+#include "../include/as_corner.h"
 TrackAlgInfo gAlgInfo;
 extern void showAlgInfo();
 void asTrackInit(AlgParams*params)
 {
 	printf("%s\n",__FUNCTION__);
 	asDetectInit(params->img_w, params->img_h);
+	asCornerInit(params->img_w, params->img_h);
 
 }
 void asTrackProcess(AlgFrame*frame)
@@ -18,6 +20,7 @@ void asTrackProcess(AlgFrame*frame)
 	gAlgInfo.img_h = frame->img_h;
 	printf("frameid %d tts %lld\n,", frame->frameId, frame->tts);
 	asDetectProcess(gAlgInfo.img_y, gAlgInfo.img_w, gAlgInfo.img_h, gAlgInfo.asDetectedBoxes,&gAlgInfo.asDetectNum);
+	asCornerProcess(gAlgInfo.img_y,gAlgInfo.asCorner,&gAlgInfo.asCornerNum);
 	showAlgInfo();
 	printf("%s\n", __FUNCTION__);
 }

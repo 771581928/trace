@@ -142,11 +142,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\as_corner.cpp" />
     <ClCompile Include="source\as_show_alg.cpp" />
     <ClCompile Include="source\as_track.cpp" />
     <ClCompile Include="source\util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\as_corner.h" />
     <ClInclude Include="include\as_track.h" />
     <ClInclude Include="include\as_track_alg.h" />
   </ItemGroup>

@@ -15,10 +15,19 @@ void drawDetectBoxes(IplImage *imgRGB)
 		r.y = gAlgInfo.asDetectedBoxes[i].y;
 		r.width = gAlgInfo.asDetectedBoxes[i].width;
 		r.height = gAlgInfo.asDetectedBoxes[i].height;
-		cvRectangleR(imgRGB, r, cvScalar(0, 0, 255), 3, 4, 0);
+		cvRectangleR(imgRGB, r, cvScalar(255, 0, 0), 2, 4, 0);
 	}
 
-
+}
+void drawCorner(IplImage*imgRGB)
+{
+	for (int  i = 0; i < gAlgInfo.asCornerNum; i++)
+	{
+		CvPoint point;
+		point.x = gAlgInfo.asCorner[i].x;
+		point.y = gAlgInfo.asCorner[i].y;
+		cvCircle(imgRGB, point, 5, cvScalar(0, 0, 255), 5, 8, 0);
+	}
 }
 void showAlgInfo()
 {
@@ -32,6 +41,7 @@ void showAlgInfo()
 	
 	cvCvtColor(img, imgRGB, CV_GRAY2RGB);
 	drawDetectBoxes(imgRGB);
+	drawCorner(imgRGB);
 
 	cvShowImage("img", imgRGB);
 	cvWaitKey(0);

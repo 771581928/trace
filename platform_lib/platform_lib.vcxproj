@@ -136,6 +136,9 @@
   <ItemGroup>
     <ClCompile Include="source\as_platform.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\as_platform.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
