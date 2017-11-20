@@ -14,4 +14,56 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\dvACF.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dvUtils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gradMagTable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MvDetect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MvMulObjDetect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\OpenMV.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\paraOfACF.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\paraOfNight.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\as_detect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\dvACF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dvUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MvDetect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MvDetectAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MvPlatform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OpenMV.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\as_detect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

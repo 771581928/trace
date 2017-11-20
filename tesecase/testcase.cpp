@@ -27,6 +27,8 @@ int main()
 	double frame_width = capture.get(CV_CAP_PROP_FRAME_WIDTH);
 	double frame_height = capture.get(CV_CAP_PROP_FRAME_HEIGHT);
 	AlgParams params;
+	params.img_w = PROCESS_IMG_W;
+	params.img_h = PROCESS_IMG_H;
 	
 	asTrackInit(&params);
 
@@ -54,7 +56,7 @@ int main()
 		algFrame.uv = NULL;
 		algFrame.img_w = gray.cols;
 		algFrame.img_h = gray.rows;
-		showImg(algFrame.y, algFrame.img_w, algFrame.img_h);
+		//showImg(algFrame.y, algFrame.img_w, algFrame.img_h);
 
 		asTrackProcess(&algFrame);
 		

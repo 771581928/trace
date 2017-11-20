@@ -79,6 +79,12 @@
     <ClCompile Include="testcase.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\detect_lib\detect_lib.vcxproj">
+      <Project>{458a5e0c-ff4c-4a88-a4d5-18e4fd597c4b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\platform_lib\platform_lib.vcxproj">
+      <Project>{bf386d21-db19-4920-8643-918e4c530e70}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\track_lib\track_lib.vcxproj">
       <Project>{9ab80bc0-f632-4221-ac38-d30460527127}</Project>
     </ProjectReference>

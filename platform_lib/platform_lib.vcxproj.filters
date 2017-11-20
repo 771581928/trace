@@ -15,22 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\as_track.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="source\util.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="source\as_show_alg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\as_track.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="include\as_track_alg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
+    <ClCompile Include="source\as_platform.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

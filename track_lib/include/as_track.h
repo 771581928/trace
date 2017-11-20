@@ -9,6 +9,8 @@ typedef struct _AlgParams
 {
 	//mask ROI
 	// control sect..so on
+	int img_w;
+	int img_h;
 }AlgParams;
 
 typedef struct _AlgFrame

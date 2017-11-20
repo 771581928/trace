@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "track_lib", "track_lib\trac
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "detect_lib", "detect_lib\detect_lib.vcxproj", "{458A5E0C-FF4C-4A88-A4D5-18E4FD597C4B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "platform_lib", "platform_lib\platform_lib.vcxproj", "{BF386D21-DB19-4920-8643-918E4C530E70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -39,6 +41,14 @@ Global
 		{458A5E0C-FF4C-4A88-A4D5-18E4FD597C4B}.Release|Win32.Build.0 = Release|Win32
 		{458A5E0C-FF4C-4A88-A4D5-18E4FD597C4B}.Release|x64.ActiveCfg = Release|x64
 		{458A5E0C-FF4C-4A88-A4D5-18E4FD597C4B}.Release|x64.Build.0 = Release|x64
+		{BF386D21-DB19-4920-8643-918E4C530E70}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF386D21-DB19-4920-8643-918E4C530E70}.Debug|Win32.Build.0 = Debug|Win32
+		{BF386D21-DB19-4920-8643-918E4C530E70}.Debug|x64.ActiveCfg = Debug|x64
+		{BF386D21-DB19-4920-8643-918E4C530E70}.Debug|x64.Build.0 = Debug|x64
+		{BF386D21-DB19-4920-8643-918E4C530E70}.Release|Win32.ActiveCfg = Release|Win32
+		{BF386D21-DB19-4920-8643-918E4C530E70}.Release|Win32.Build.0 = Release|Win32
+		{BF386D21-DB19-4920-8643-918E4C530E70}.Release|x64.ActiveCfg = Release|x64
+		{BF386D21-DB19-4920-8643-918E4C530E70}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
