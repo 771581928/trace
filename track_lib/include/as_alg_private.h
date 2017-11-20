@@ -54,7 +54,18 @@ typedef struct _CornerAlgInfo
 	//AsCorner nonMaxCorner[MAX_CORNERS_PER_FRAME];
 }CornerAlgInfo;
 
+
 typedef struct _TrackAlgInfo
+{
+	unsigned long long beginTTs;
+	unsigned long long lastTTs;
+	int trackCornerNum;
+	unsigned char color[3];
+	AsCorner trackCorner[MAX_ORB_CORNERS];
+
+}TrackAlgInfo;
+
+typedef struct _AlgInfo
 {
 	unsigned  char *img_y;
 	unsigned  char *img_uv;
@@ -64,7 +75,10 @@ typedef struct _TrackAlgInfo
 	AsBox asDetectedBoxes[MAX_DETECTED_BOXES_NUM];
 	int asCornerNum;
 	AsCorner asCorner[MAX_CORNERS_PER_FRAME];
-}TrackAlgInfo;
+	char asCornerMatch[MAX_CORNERS_PER_FRAME];
+	
+
+}AlgInfo;
 
 
 

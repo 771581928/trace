@@ -4,7 +4,7 @@
 #include "../include/as_alg_private.h"
 #include "../../detect_lib/include/as_detect.h"
 #include "../include/as_corner.h"
-TrackAlgInfo gAlgInfo;
+AlgInfo gAlgInfo;
 extern void showAlgInfo();
 void asAlgInit(AlgParams*params)
 {

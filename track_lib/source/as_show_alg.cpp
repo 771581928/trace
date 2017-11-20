@@ -3,7 +3,7 @@
 
 #include "stdio.h"
 #include "../include/as_alg_private.h"
-extern TrackAlgInfo gAlgInfo;
+extern AlgInfo gAlgInfo;
 
 void drawDetectBoxes(IplImage *imgRGB)
 {
