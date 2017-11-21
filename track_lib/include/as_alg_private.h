@@ -9,7 +9,8 @@ extern "C" {
 
 #define MAX_ORB_CORNERS 512 
 #define MAX_CORNERS_PER_FRAME 512       
-#define MAX_CORNERS_PER_TRACK 512       
+#define MAX_CORNERS_PER_TRACK 512     
+#define MAX_TRACKS_PER_FRAME  512     
 #define MAX_TRACKS_PER_GROUP 160        
 
 
@@ -57,11 +58,13 @@ typedef struct _CornerAlgInfo
 
 typedef struct _TrackAlgInfo
 {
+	int trackId;
 	unsigned long long beginTTs;
 	unsigned long long lastTTs;
-	int trackCornerNum;
-	unsigned char color[3];
-	AsCorner trackCorner[MAX_ORB_CORNERS];
+	int trackLength;
+	AsCorner trackPoint[MAX_CORNERS_PER_TRACK];
+	unsigned char color[3];//for show
+	AsRect matchRect;
 
 }TrackAlgInfo;
 
@@ -75,8 +78,9 @@ typedef struct _AlgInfo
 	AsBox asDetectedBoxes[MAX_DETECTED_BOXES_NUM];
 	int asCornerNum;
 	AsCorner asCorner[MAX_CORNERS_PER_FRAME];
-	char asCornerMatch[MAX_CORNERS_PER_FRAME];
-	
+	char asCornerMatchStatus[MAX_CORNERS_PER_FRAME];
+	int asTrackNum;
+	TrackAlgInfo asTrack[MAX_TRACKS_PER_FRAME];
 
 }AlgInfo;
 
