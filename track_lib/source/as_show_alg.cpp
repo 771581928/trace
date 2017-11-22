@@ -26,12 +26,35 @@ void drawCorner(IplImage*imgRGB)
 		CvPoint point;
 		point.x = gAlgInfo.asCorner[i].x;
 		point.y = gAlgInfo.asCorner[i].y;
-		cvCircle(imgRGB, point, 5, cvScalar(0, 0, 255), 5, 8, 0);
+		cvCircle(imgRGB, point, 2, cvScalar(0, 0, 255), 2, 8, 0);
+	}
+}
+
+void drawTrack(IplImage*imgRGB)
+{
+	for (int i = 0; i < gAlgInfo.asTrackNum; i++)
+	{
+		if (gAlgInfo.asTrack[i].trackLength > 2)
+		{
+			for (int j = 0; j < gAlgInfo.asTrack[i].trackLength - 1; j++)
+			{
+				CvPoint start_point, end_point;
+				start_point.x = gAlgInfo.asTrack[i].trackPoint[j].x;
+				start_point.y = gAlgInfo.asTrack[i].trackPoint[j].y;
+				end_point.x = gAlgInfo.asTrack[i].trackPoint[j+1].x;
+				end_point.y = gAlgInfo.asTrack[i].trackPoint[j+1].y;
+				cvLine(imgRGB, start_point, end_point, cvScalar(0, 255, 0), 2, 8, 0);
+ 				//cvShowImage("img", imgRGB);
+				//printf("start point(%3d,%3d)\t end point(%3d,%3d)\n", start_point.x = gAlgInfo.asTrack[i].trackPoint[j].x, start_point.y = gAlgInfo.asTrack[i].trackPoint[j].y,
+				//	end_point.x = gAlgInfo.asTrack[i].trackPoint[j + 1].x, end_point.y = gAlgInfo.asTrack[i].trackPoint[j + 1].y);
+				//cvWaitKey(0);
+			}
+		}
 	}
 }
 void showAlgInfo()
 {
-	printf("algInfo->asDetectNum = %d\n", gAlgInfo.asDetectNum);
+	printf("algInfo->asDetectNum = %d\t algInfo->asCornerNum: %d\n", gAlgInfo.asDetectNum,gAlgInfo.asCornerNum);
 	IplImage *img = cvCreateImage(cvSize(gAlgInfo.img_w, gAlgInfo.img_h), IPL_DEPTH_8U, 1);
 	IplImage *imgRGB = cvCreateImage(cvSize(gAlgInfo.img_w, gAlgInfo.img_h), IPL_DEPTH_8U, 3);
 	for (int i = 0; i < gAlgInfo.img_h; i++)
@@ -42,9 +65,10 @@ void showAlgInfo()
 	cvCvtColor(img, imgRGB, CV_GRAY2RGB);
 	drawDetectBoxes(imgRGB);
 	drawCorner(imgRGB);
+	drawTrack(imgRGB);
 
 	cvShowImage("img", imgRGB);
-	cvWaitKey(0);
+	cvWaitKey(1);
 	cvReleaseImage(&img);
 	cvReleaseImage(&imgRGB);
 }

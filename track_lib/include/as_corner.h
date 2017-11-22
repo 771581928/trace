@@ -6,7 +6,7 @@ extern "C" {
 #include "../include/as_alg_private.h"
 
 void asCornerInit(int img_w,int img_h);
-void asCornerProcess(unsigned char *img, AsCorner *corner,int *cornerNum);
+void asCornerProcess(unsigned char *img, AsCorner *corner, int *cornerNum);
 void asCornerUnInit();
 
 #ifdef __cplusplus

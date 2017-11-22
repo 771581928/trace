@@ -4,6 +4,7 @@
 #include "../include/as_alg_private.h"
 #include "../../detect_lib/include/as_detect.h"
 #include "../include/as_corner.h"
+#include "../include/as_track.h"
 AlgInfo gAlgInfo;
 extern void showAlgInfo();
 void asAlgInit(AlgParams*params)
@@ -11,6 +12,7 @@ void asAlgInit(AlgParams*params)
 	printf("%s\n", __FUNCTION__);
 	asDetectInit(params->img_w, params->img_h);
 	asCornerInit(params->img_w, params->img_h);
+	//asTrackInit(params);
 
 }
 void asAlgProcess(AlgFrame*frame)
@@ -21,6 +23,8 @@ void asAlgProcess(AlgFrame*frame)
 	printf("frameid %d tts %lld\n,", frame->frameId, frame->tts);
 	asDetectProcess(gAlgInfo.img_y, gAlgInfo.img_w, gAlgInfo.img_h, gAlgInfo.asDetectedBoxes, &gAlgInfo.asDetectNum);
 	asCornerProcess(gAlgInfo.img_y, gAlgInfo.asCorner, &gAlgInfo.asCornerNum);
+	asTrackProcess(gAlgInfo.asCorner, gAlgInfo.asCornerNum,frame->frameId, frame->tts);
+
 	showAlgInfo();
 	printf("%s\n", __FUNCTION__);
 }

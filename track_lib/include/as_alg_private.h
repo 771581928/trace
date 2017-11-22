@@ -12,6 +12,9 @@ extern "C" {
 #define MAX_CORNERS_PER_TRACK 512     
 #define MAX_TRACKS_PER_FRAME  512     
 #define MAX_TRACKS_PER_GROUP 160        
+#define MAX_TRACKS_NUMBER (2048*2)
+	const int PREDICT_X_REGION = 28;
+	const int PREDICT_Y_REGION = 18;
 
 
 typedef struct _AsRect
@@ -80,7 +83,9 @@ typedef struct _AlgInfo
 	AsCorner asCorner[MAX_CORNERS_PER_FRAME];
 	char asCornerMatchStatus[MAX_CORNERS_PER_FRAME];
 	int asTrackNum;
-	TrackAlgInfo asTrack[MAX_TRACKS_PER_FRAME];
+	int emptyTrackNum;
+	int emptyTrackIdx[MAX_TRACKS_NUMBER];
+	TrackAlgInfo asTrack[MAX_TRACKS_NUMBER];
 
 }AlgInfo;
 
